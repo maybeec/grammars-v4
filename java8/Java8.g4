@@ -705,7 +705,8 @@ arrayInitializer
 	;
 
 variableInitializerList
-	:	variableInitializer (',' variableInitializer)*
+	:	variableInitializer 
+	|	variableInitializerList ',' variableInitializer
 	;
 
 /*
@@ -717,7 +718,7 @@ block
 	;
 
 blockStatements
-	:	blockStatement blockStatement*
+	:	blockStatement+
 	;
 
 blockStatement
